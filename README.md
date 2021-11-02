@@ -4,3 +4,5 @@
 
 Ohjelmistotuotanto-kurssin palautuskansio viikolle 1, tehtäville 2-13.
 
+Loput tehtävät toisessa repossa: https://github.com/makitzei/ohtu-tehtavat
+
