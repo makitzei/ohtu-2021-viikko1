@@ -70,7 +70,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(5)
         maara = self.varasto.ota_varastosta(8)
         
-        self.assertAlmostEqual(maara, 5)
+        self.assertAlmostEqual(maara, 7)
     
     def test_tulostus_oikein(self):
         self.assertEqual(
