@@ -1,50 +1,19 @@
+def tarkista_ala(muuttuja):
+    if muuttuja < 0.0:
+        return 0.0
+    return muuttuja
+
+def tarkista_yla(muuttuja, raja):
+    if muuttuja > raja:
+        return raja
+    return muuttuja
+
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
-        eka = 1
-        toka = 2
-        kolmas = 3
-        neljas = 4
-        viides = 5
+        self.tilavuus = tarkista_ala(tilavuus)
+        self.saldo = tarkista_yla(tarkista_ala(alku_saldo), self.tilavuus)
 
-        if tilavuus > 0.0:
-            self.tilavuus = tilavuus
-            if 2 > 1:
-                if 3 > 2:
-                    if 4 > 5:
-                        print("Jos päästiin tänne, jotain on vialla")
-
-        else:
-            # virheellinen, nollataan
-            self.tilavuus = 0.0
-            eka = 1
-            toka = 2
-            kolmas = 3
-            neljas = 4
-            viides = 5
-
-        if alku_saldo < 0.0:
-            # virheellinen, nollataan
-            self.saldo = 0.0
-            eka = 1
-            toka = 2
-            kolmas = 3
-            neljas = 4
-            viides = 5
-        elif alku_saldo <= tilavuus:
-            # mahtuu
-            self.saldo = alku_saldo
-        else:
-            # täyteen ja ylimäärä hukkaan!
-            self.saldo = tilavuus
-
-        #Testin rikkomista varten ylimääräisiä lauseita
-        eka = 1
-        toka = 2
-        kolmas = 3
-        neljas = 4
-        viides = 5
-
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms. Saakohan pelkällä kommentilla testin rikki? Saa!
+    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
