@@ -13,7 +13,7 @@ class Varasto:
         self.tilavuus = tarkista_ala(tilavuus)
         self.saldo = tarkista_yla(tarkista_ala(alku_saldo), self.tilavuus)
 
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms. Tehdään tästä rivistä testin vuoksi taas vähän liian pitkä.
+    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
